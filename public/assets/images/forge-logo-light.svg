@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none" role="img" aria-label="Quick Code">
+  <rect x="2" y="4" width="40" height="40" rx="8" fill="#070B14"/>
+  <rect x="11" y="13" width="10" height="10" rx="1.5" fill="#FF5A1F"/>
+  <rect x="23" y="13" width="10" height="10" rx="1.5" fill="#22D3EE"/>
+  <rect x="11" y="25" width="10" height="10" rx="1.5" fill="#22D3EE"/>
+  <rect x="23" y="25" width="10" height="10" rx="1.5" fill="#FF5A1F"/>
+  <text x="54" y="32" font-family="Syne, Manrope, Arial, sans-serif" font-size="22" font-weight="800" fill="#0B1220" letter-spacing="-0.04em">Quick Code</text>
+</svg>

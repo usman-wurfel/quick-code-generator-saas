@@ -1,0 +1,129 @@
+/* Full frontend dark shell — matches hero banner */
+
+:root {
+    --forge-ink: #070b14;
+    --forge-panel: #0d1524;
+    --forge-signal: #ff5a1f;
+    --forge-cyan: #2ec9b0;
+    --forge-teal: #0ea5a4;
+    --primary-0: #ff5a1f;
+    --primary-1: #0ea5a4;
+    --accent-0: #2ec9b0;
+    --accent-1: #ff5a1f;
+    --header-bg: #070b14;
+    --dark: #070b14;
+    --gray-0: #121a2a;
+    --gray-1: #1e293b;
+    --gray-2: #8b9bb4;
+    --blue-text-color: #e8f1ff;
+    --blue-gray-0: #121a2a;
+    --blue-gray-1: #8b9bb4;
+}
+
+html,
+body {
+    font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    background:
+        radial-gradient(ellipse 80% 50% at 10% 0%, rgba(46, 201, 176, 0.08), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 90% 20%, rgba(255, 90, 31, 0.07), transparent 45%),
+        linear-gradient(180deg, #070b14 0%, #0a1220 40%, #070b14 100%);
+    background-attachment: fixed;
+    color: #e8f1ff;
+    min-height: 100%;
+}
+
+.website-header h1,
+.website-header h2,
+.website-banner h1,
+.website-banner h2,
+.website-footer h1,
+.website-footer h2,
+section h1,
+section h2,
+.section-title {
+    font-family: 'Syne', 'Manrope', sans-serif;
+    color: #f4f8ff;
+}
+
+/*
+ * Account + admin sit on white cards. Light page text was inheriting
+ * into those shadow trees, so labels and titles disappeared.
+ */
+qrcg-login,
+qrcg-sign-up,
+qrcg-forgot-password,
+qrcg-reset-password,
+qrcg-account-router,
+qrcg-dashboard-layout,
+qrcg-my-account,
+qrcg-my-account-page {
+    color: #1b2436;
+    --dark: #1b2436;
+    --gray-0: #f1f4f8;
+    --gray-1: #d5dbe6;
+    --gray-2: #3d475c;
+    --blue-text-color: #1b2436;
+    --blue-gray-1: #3d475c;
+}
+
+/* Keep filled buttons readable on orange / teal fills */
+a.button.primary,
+a.button.accent,
+a.button.danger,
+.button.primary,
+.button.accent,
+.button.danger {
+    color: #ffffff !important;
+}
+
+a.button.primary:hover,
+a.button.accent:hover,
+a.button.danger:hover {
+    color: #ffffff !important;
+}
+
+::selection {
+    background: rgba(46, 201, 176, 0.28);
+    color: #070b14;
+}
+
+/* Generator console — dark tokens inherit into shadow DOM */
+.website-banner .tech-console,
+.website-banner .tech-console qrcg-website-banner {
+    color: #e8f1ff;
+    --gray-0: #1a2436;
+    --gray-1: #334155;
+    --gray-2: #94a3b8;
+    --dark: #e8f1ff;
+    --blue-text-color: #e8f1ff;
+    --blue-gray-0: #121a2a;
+    --blue-gray-1: #8b9bb4;
+    --blue-input-background-color: #0d1524;
+}
+
+.website-banner .tech-console input,
+.website-banner .tech-console textarea,
+.website-banner .tech-console select {
+    background: #121a2a !important;
+    color: #e8f1ff !important;
+    border-color: rgba(46, 201, 176, 0.22) !important;
+}
+
+/* Mobile open menu */
+.website-header.open {
+    background: #0d1524 !important;
+}
+
+.website-header.open .close-btn {
+    background: transparent !important;
+    color: #e2f2ff !important;
+}
+
+/*
+ * Admin keeps the original light workspace. The dark marketing
+ * background was hiding black labels, breadcrumbs, and toolbar buttons.
+ */
+body[class*="path-dashboard"] {
+    background: #eef1f6;
+    color: #1b2436;
+}

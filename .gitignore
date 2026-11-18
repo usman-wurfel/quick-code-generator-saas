@@ -1,0 +1,50 @@
+# Dependencies
+/vendor/
+/node_modules/
+/resources/themes/blue/node_modules/
+/resources/themes/*/node_modules/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Laravel
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+/storage/*.key
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/app/public/*
+!/storage/app/public/.gitignore
+/public/storage
+/public/hot
+
+# Theme build intermediates (keep synced public assets)
+/resources/themes/blue/dist/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+
+# Local dumps / heavy runtime data
+*.sql
+*.sqlite
+*.log
+/storage/app/maxmind/
+/storage/app/qrcode_files/*

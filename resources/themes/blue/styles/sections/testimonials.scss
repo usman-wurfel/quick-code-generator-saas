@@ -1,0 +1,104 @@
+section.testimonials {
+    margin-top: 7rem;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(255, 90, 31, 0.08), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(46, 201, 176, 0.08), transparent 42%),
+        #0a1220;
+    overflow: hidden;
+    color: #e8f1ff;
+
+    .main-testimonial {
+        padding: 5rem 0;
+        position: relative;
+        text-align: center;
+
+        .text {
+            position: relative;
+            font-size: 2.5rem;
+            line-height: 1.6;
+            z-index: 1;
+            font-weight: 300;
+            color: #e8f1ff;
+        }
+
+        .heading {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 2rem 0;
+            text-align: center;
+            color: #2ec9b0;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        }
+
+        .customer-name {
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+
+        .details {
+            margin: auto;
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: #8b9bb4;
+            label {
+                font-weight: 500;
+                color: #e8f1ff;
+            }
+        }
+    }
+
+    .quote-image {
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        z-index: 0;
+        pointer-events: none;
+        width: 15rem;
+        opacity: 0.15;
+        filter: hue-rotate(140deg);
+    }
+
+    .testimonials-track {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 2rem;
+        width: 3400px;
+        animation: testimonial-slideshow 90s linear infinite alternate;
+        margin-bottom: 5rem;
+
+        [dir='rtl'] & {
+            animation: testimonial-slideshow-reverse 90s linear infinite
+                alternate;
+        }
+
+        @keyframes testimonial-slideshow {
+            0% {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes testimonial-slideshow-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .item {
+            background-color: #121a2a;
+            border: 1px solid rgba(46, 201, 176, 0.14);
+            border-radius: 0.85rem;
+            padding: 1.5rem;
+            color: #c9d7ea;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+{{ t('This domain name is used to serve dynamic QR codes.') }}

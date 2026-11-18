@@ -1,0 +1,29 @@
+html {
+    font-family: 'Manrope', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Helvetica, Arial, sans-serif;
+    tab-size: 4;
+    color: var(--blue-text-color);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
+    &[lang='ar'] {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+h1,
+h2,
+h3,
+.section-title,
+.website-banner h1 {
+    font-family: 'Syne', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.03em;
+}
+
+.tech-mono,
+.tag-line,
+.website-banner .tech-chip,
+.features-in-numbers .number-box label {
+    font-family: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        monospace;
+}

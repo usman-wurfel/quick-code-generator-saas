@@ -1,0 +1,48 @@
+@import './core/normalize.scss';
+@import './core/colors.scss';
+@import './core/typography.scss';
+@import './core/layout.scss';
+@import './core/vars.scss';
+
+@import './components/header.scss';
+@import './components/logo.scss';
+@import './components/button.scss';
+@import './components/footer.scss';
+@import './components/modal.scss';
+@import './components/image-gallery.scss';
+@import './components/input.scss';
+@import './components/card.scss';
+@import './components/loader.scss';
+@import './components/gdpr-widget.scss';
+@import './components/misc.scss';
+@import './components/frontend-toast.scss';
+@import './components/body-scroll-blocker.scss';
+@import './components/share-on-whatsapp.scss';
+
+@import './sections/informative-text.scss';
+@import './sections/mixins.scss';
+@import './sections/features-in-numbers.scss';
+@import './sections/qrcode-showcase.scss';
+@import './sections/qrcode-types.scss';
+@import './sections/qrcode-stats.scss';
+@import './sections/testimonials.scss';
+@import './sections/pricing.scss';
+@import './sections/website-banner.scss';
+@import './sections/inner-page-title.scss';
+@import './sections/blog-list.scss';
+@import './sections/post.scss';
+@import './sections/payment-result.scss';
+@import './sections/free-trial-notice.scss';
+@import './sections/account-credit-pricing.scss';
+@import './sections/blog-short-list.scss';
+
+@import './sidebars/subscribe.scss';
+
+@import './qrcode-types/base.scss';
+@import './qrcode-types/business-profile.scss';
+@import './qrcode-types/vcard-plus.scss';
+@import './qrcode-types/restaurant-menu.scss';
+@import './qrcode-types/product-catalogue.scss';
+@import './qrcode-types/biolinks.scss';
+@import './qrcode-types/event.scss';
+@import './qrcode-types/lead-form-type.scss';

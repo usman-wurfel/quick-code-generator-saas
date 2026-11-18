@@ -1,0 +1,4 @@
+.block.opening-hours-block {
+    @include opening-hours;
+    @include white-card($icons-color: black);
+}

@@ -1,0 +1,221 @@
+@import './lead-form/answer-choices.scss';
+@import './lead-form/answer-rating.scss';
+@import './lead-form/answer-stars.scss';
+@import './lead-form/answer-text.scss';
+
+@import './lead-form/animation.scss';
+
+@import './lead-form/success-page.scss';
+
+.lead-form {
+    @include success-page;
+
+    display: none;
+    z-index: 100;
+
+    &.inline.measured {
+        height: 0;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        pointer-events: none;
+
+        &:not(.opened) {
+            .question-page > * {
+                opacity: 0;
+            }
+
+            .question-page-footer {
+                opacity: 0;
+            }
+
+            .lead-form-close-button {
+                opacity: 0;
+            }
+        }
+
+        &.opening {
+            height: 100vh;
+            height: var(--available-height);
+            transition: 0.5s ease;
+        }
+
+        &.closing {
+            transition: 0.5s ease;
+        }
+
+        &.closed {
+            opacity: 0;
+        }
+
+        &.opened {
+            height: 100vh;
+            height: var(--available-height);
+
+            border-radius: 0;
+            pointer-events: all;
+
+            .question-page > * {
+                transition: opacity 0.3s ease;
+            }
+
+            .question-page-footer {
+                transition: opacity 0.3s ease;
+            }
+        }
+    }
+
+    &.full-page .lead-form-close-button {
+        display: none;
+    }
+
+    .questions {
+        overflow: hidden;
+        height: 100%;
+        background-color: #06044f;
+    }
+
+    .question-page {
+        height: 100%;
+        background-color: #06044f;
+        color: black;
+        padding: 0 2rem 0 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        transition: 0.5s ease;
+        top: 0px;
+    }
+
+    .question-container {
+        font-size: 1.5rem;
+        line-height: 1.7;
+
+        &,
+        .answer.text {
+            input,
+            textarea,
+            & {
+                color: white;
+            }
+        }
+    }
+
+    .question {
+        margin-bottom: 2rem;
+        position: relative;
+
+        .question-number {
+            position: absolute;
+            left: -1.5rem;
+            font-size: 1rem;
+            top: 0.35rem;
+        }
+
+        .question-description {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+    }
+
+    *:not(input, textarea) {
+        user-select: none;
+    }
+
+    .ok-button {
+        margin-top: 2rem;
+
+        .button {
+            display: flex;
+            align-items: center;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            margin-left: 0.5rem;
+
+            path {
+                fill: currentColor;
+            }
+        }
+    }
+
+    .question-page-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .button[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .navigation {
+        display: flex;
+
+        .button {
+            padding: 0.2rem;
+
+            &:first-child {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &:nth-child(2) {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+
+                path {
+                    fill: currentColor;
+                }
+            }
+        }
+    }
+
+    .lead-form-close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2rem;
+        z-index: 3;
+        color: white;
+        box-sizing: content-box;
+
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        transform: scale(1);
+
+        &:hover {
+            transform: scale(1.3);
+        }
+
+        .inner-button {
+            background-color: black;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            position: relative;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            path {
+                fill: currentColor;
+            }
+        }
+    }
+}

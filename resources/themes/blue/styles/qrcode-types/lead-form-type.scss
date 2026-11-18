@@ -1,0 +1,7 @@
+.qrcode-type-lead-form {
+    @include qrcode-type-loader;
+
+    .powered-by {
+        display: none;
+    }
+}

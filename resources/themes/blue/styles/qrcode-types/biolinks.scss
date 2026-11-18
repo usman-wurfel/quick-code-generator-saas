@@ -1,0 +1,106 @@
+@import './biolink-blocks/dynamic-block.scss';
+
+@import './biolink-blocks/paragraph-block.scss';
+
+@import './biolink-blocks/opening-hours-block.scss';
+
+@import './biolink-blocks/lead-form-block.scss';
+
+.qrcode-type-biolinks {
+    @include qrcode-type-loader;
+
+    .layout-generated-webpage {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: $box-shadow;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .block {
+        margin: 2rem 0;
+    }
+
+    .logo-block {
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        justify-content: center;
+        flex-direction: column;
+
+        img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .title-block {
+        text-align: center;
+
+        h2 {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+        }
+    }
+
+    .image-grid-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+
+        a {
+            display: block;
+            padding-bottom: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .link-block {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            @extend .button;
+            line-height: 1.7;
+        }
+    }
+
+    .image-block {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        position: relative;
+
+        &.has-border {
+            box-shadow: $box-shadow;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 1rem;
+
+            img {
+                border-radius: 0.5rem;
+            }
+        }
+
+        .caption {
+            font-weight: bold;
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        a {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+        }
+    }
+}

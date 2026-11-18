@@ -1,0 +1,254 @@
+section.website-banner {
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 1.6;
+    padding: 5.5rem 0 4.5rem;
+    overflow: hidden;
+    min-height: min(92vh, 900px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+    }
+
+    div.background:not(.user-background) {
+        background-image: none;
+        background-color: var(--forge-ink);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 65% 50% at 8% 90%, rgba(255, 90, 31, 0.45), transparent 58%),
+                radial-gradient(ellipse 55% 45% at 92% 8%, rgba(46, 201, 176, 0.28), transparent 55%),
+                radial-gradient(ellipse 40% 35% at 50% 40%, rgba(14, 165, 164, 0.18), transparent 60%),
+                linear-gradient(160deg, #070b14 0%, #0d1524 42%, #09101c 100%);
+            animation: forge-banner-glow 14s ease-in-out infinite alternate;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.55;
+            background-image:
+                linear-gradient(rgba(46, 201, 176, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(46, 201, 176, 0.07) 1px, transparent 1px),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.015) 3px
+                );
+            background-size: 56px 56px, 56px 56px, 100% 4px;
+            mask-image: radial-gradient(ellipse at center, black 25%, transparent 78%);
+        }
+    }
+
+    > *:not(.background):not(.c-group) {
+        position: relative;
+        z-index: 1;
+    }
+
+    .tech-chip-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 1.35rem;
+        animation: forge-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .tech-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #d7fbff;
+        padding: 0.4rem 0.75rem;
+        border-radius: 0.3rem;
+        border: 1px solid rgba(46, 201, 176, 0.35);
+        background: rgba(7, 11, 20, 0.55);
+        backdrop-filter: blur(8px);
+
+        .dot {
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background: #34d399;
+            box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
+            animation: tech-pulse 1.6s ease-in-out infinite;
+        }
+
+        &.muted {
+            color: rgba(255, 255, 255, 0.72);
+            border-color: rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.04);
+        }
+    }
+
+    .control {
+        min-height: 400px;
+    }
+
+    .tech-console {
+        position: relative;
+        border-radius: 1rem;
+        border: 1px solid rgba(46, 201, 176, 0.22);
+        background: linear-gradient(180deg, #0f172a 0%, #0a1220 100%);
+        box-shadow:
+            0 0 0 1px rgba(46, 201, 176, 0.08),
+            0 24px 60px rgba(0, 0, 0, 0.45);
+        overflow: hidden;
+        color: #e8f1ff;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border: 2px solid var(--forge-cyan, #2ec9b0);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        &::before {
+            top: 10px;
+            left: 10px;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        &::after {
+            right: 10px;
+            bottom: 10px;
+            border-left: 0;
+            border-top: 0;
+        }
+    }
+
+    .console-chrome {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.7rem 1rem;
+        background: linear-gradient(180deg, #0d1524 0%, #0a1220 100%);
+        border-bottom: 1px solid rgba(46, 201, 176, 0.18);
+
+        span {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: #334155;
+
+            &:nth-child(1) {
+                background: #ff5a1f;
+            }
+            &:nth-child(2) {
+                background: #fbbf24;
+            }
+            &:nth-child(3) {
+                background: #34d399;
+            }
+        }
+
+        em {
+            margin-left: 0.6rem;
+            font-style: normal;
+            font-family: 'IBM Plex Mono', ui-monospace, monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
+            color: rgba(46, 201, 176, 0.85);
+        }
+    }
+
+    qrcg-website-banner {
+        display: block;
+        animation: qrcg-website-banner-animation 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        letter-spacing: -0.04em;
+        font-weight: 800;
+        margin: 0 0 1.15rem 0;
+        font-size: clamp(2.35rem, 5.4vw, 4rem);
+        color: white;
+        line-height: 1.05;
+        text-shadow: 0 0 40px rgba(46, 201, 176, 0.15);
+        animation: forge-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    p {
+        margin: 0 auto 2.75rem;
+        max-width: 40rem;
+        font-size: 1.12rem;
+        font-weight: 400;
+        color: rgba(226, 242, 255, 0.82);
+        animation: forge-rise 0.7s 0.08s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @media (max-width: 900px) {
+        padding: 4rem 0 3rem;
+        min-height: auto;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0 1rem 2rem;
+        }
+
+        .tech-console::before,
+        .tech-console::after {
+            display: none;
+        }
+    }
+}
+
+@keyframes forge-rise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes forge-banner-glow {
+    from {
+        filter: saturate(1);
+        transform: scale(1);
+    }
+    to {
+        filter: saturate(1.18);
+        transform: scale(1.04);
+    }
+}
