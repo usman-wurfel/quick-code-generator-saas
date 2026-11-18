@@ -1,8 +1,10 @@
-# Quick Code — QR Code Generator SaaS
+# Quick Code
 
-A full-stack **QR Code Generator SaaS** with a dark tech marketing frontend and a complete admin dashboard. Built with **Laravel**, **Lit web components**, **Vite**, and **MySQL**.
+**Quick Code** is a full-stack QR Code Generator SaaS platform for creating, managing, and tracking dynamic QR codes.
 
-Portfolio redesign focused on a modern IT look: deep ink backgrounds, signal-orange CTAs, teal accents, and a terminal-style homepage generator.
+It includes a dark, tech-focused marketing frontend and a production-style admin dashboard for QR management, users, subscriptions, content, and system settings.
+
+**Stack:** Laravel · Lit · Vite · MySQL · Sass
 
 ---
 
