@@ -14,10 +14,6 @@ It includes a dark, tech-focused marketing frontend and a production-style admin
 
 ![Frontend hero](docs/screenshots/frontend-hero.png)
 
-### Frontend — Full homepage
-
-![Frontend full page](docs/screenshots/frontend-full.png)
-
 ### Frontend — Gradients showcase
 
 ![Frontend gradients](docs/screenshots/frontend-gradients.png)
