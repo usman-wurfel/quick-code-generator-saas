@@ -34,13 +34,101 @@ It includes a dark, tech-focused marketing frontend and a production-style admin
 
 ![Admin QR codes](docs/screenshots/admin-qrcodes.png)
 
+### Admin — Archived QR codes
+
+![Admin archived QR codes](docs/screenshots/admin-qrcodes-archived.png)
+
+### Admin — Create QR Code
+
+![Admin create QR code](docs/screenshots/admin-qrcode-create.png)
+
 ### Admin — Users
 
 ![Admin users](docs/screenshots/admin-users.png)
 
+### Admin — Paying users
+
+![Admin paying users](docs/screenshots/admin-users-paying.png)
+
+### Admin — Non-paying users
+
+![Admin non-paying users](docs/screenshots/admin-users-non-paying.png)
+
+### Admin — Subscription plans
+
+![Admin plans](docs/screenshots/admin-plans.png)
+
+### Admin — Subscriptions
+
+![Admin subscriptions](docs/screenshots/admin-subscriptions.png)
+
+### Admin — Transactions
+
+![Admin transactions](docs/screenshots/admin-transactions.png)
+
+### Admin — Payment processors
+
+![Admin payment processors](docs/screenshots/admin-payment-processors.png)
+
+### Admin — Payment gateways
+
+![Admin payment gateways](docs/screenshots/admin-payment-gateways.png)
+
+### Admin — Currencies
+
+![Admin currencies](docs/screenshots/admin-currencies.png)
+
+### Admin — Blog posts
+
+![Admin blog posts](docs/screenshots/admin-blog-posts.png)
+
+### Admin — Content blocks
+
+![Admin content blocks](docs/screenshots/admin-content-blocks.png)
+
+### Admin — Translations
+
+![Admin translations](docs/screenshots/admin-translations.png)
+
+### Admin — Custom codes
+
+![Admin custom codes](docs/screenshots/admin-custom-codes.png)
+
+### Admin — Pages
+
+![Admin pages](docs/screenshots/admin-pages.png)
+
+### Admin — Contacts
+
+![Admin contacts](docs/screenshots/admin-contacts.png)
+
+### Admin — Dynamic biolink blocks
+
+![Admin biolink blocks](docs/screenshots/admin-biolink-blocks.png)
+
+### Admin — System status
+
+![Admin system status](docs/screenshots/admin-system-status.png)
+
 ### Admin — System settings
 
 ![Admin settings](docs/screenshots/admin-settings.png)
+
+### Admin — Notifications
+
+![Admin notifications](docs/screenshots/admin-notifications.png)
+
+### Admin — SMS portals
+
+![Admin SMS portals](docs/screenshots/admin-sms-portals.png)
+
+### Admin — Auth workflow
+
+![Admin auth workflow](docs/screenshots/admin-auth-workflow.png)
+
+### Admin — Domains
+
+![Admin domains](docs/screenshots/admin-domains.png)
 
 ---
 
